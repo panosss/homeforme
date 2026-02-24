@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body data-theme="dark">
+    <header>
+      <h3>Pro Workspaces</h3>
+      <div class="header-actions">
+        <button id="settings-toggle-btn" title="Settings">⚙️</button>
+        <button id="ui-switch-btn" title="Switch UI">🔝</button>
+      </div>
+    </header>
+
+    <div id="settings-panel">
+      <div class="settings-content">
+        <div class="settings-row">
+          <label class="switch">
+            <input type="checkbox" id="discard-check" />
+            <span class="label-text">Memory Saver</span>
+          </label>
+          <button id="theme-toggle">🌓</button>
+        </div>
+        <div class="settings-row">
+          <span class="label-text" id="lang-label">Language</span>
+          <select id="lang-select" class="settings-select">
+            <option value="en">English</option>
+            <option value="el">Ελληνικά</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+          </select>
+        </div>
+        <div class="backup-bar">
+          <button id="export-btn">📤 Export</button>
+          <button id="import-btn">📥 Import</button>
+          <input
+            type="file"
+            id="import-file"
+            style="display: none"
+            accept=".json"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="new-ws-name" placeholder="New workspace name..." />
+      <button id="add-btn">Create</button>
+    </div>
+
+    <div id="ws-list"></div>
+    <div id="status-bar">Ready</div>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>
